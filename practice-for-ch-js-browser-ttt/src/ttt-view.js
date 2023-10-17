@@ -23,18 +23,31 @@ class View {
   }
   
   handleClick(e) {
-    let tilePos = e.target.getAttribute("pos").split(",")
+    
     // let arrayPos = Array.from(tilePos)
-    debugger
-    this.game.playMove(tilePos)
-    e.target.innerText = this.game.currentPlayer
+    // debugger
+    // this.game.makeMove(tilePos)
+    this.makeMove(e.target)
+    // e.target.innerText = this.game.currentPlayer
+    
   }
 
   makeMove(square) {
+
+    square.classList.add("selected")
+    let tilePos = square.getAttribute("pos").split(",").map(el => parseInt(el))
+    this.game.playMove(tilePos)
+    square.innerText = this.game.currentPlayer
+
+    if  (this.game.winner()) {
+      this.handleGameOver()
+    }
   }
   
   handleGameOver() {
+      winMessage.classList.add("win")
+      winMessage.classList.remove("hidden")  
   }
-}
 
+}
 export default View;
