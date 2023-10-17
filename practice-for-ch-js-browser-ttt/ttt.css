@@ -22,7 +22,7 @@ li {
 
 }
 li:hover {
-    background-color: #F4C2C2;
+    background-color: pink;
 }
 
 
@@ -43,6 +43,6 @@ li:hover {
 
 .win {
     display: block;
-    color: green;
+    color: pink;
     font-size: 25px;
 }
