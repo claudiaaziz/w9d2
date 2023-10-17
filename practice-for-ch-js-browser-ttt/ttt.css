@@ -1,1 +1,23 @@
+
+
 /* Your code here */
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    column-gap: 0px;
+}
+
+li {
+    width: 200px; 
+    border: 1px solid black;
+    background-color: gray ;
+}
+li:hover {
+    background-color: #F4C2C2;
+}
+

@@ -1,5 +1,10 @@
-Add your import statements for View and Game here
+import View from "./ttt-view";
+import Game from "../ttt_node/game";
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Your code here
+  const game = new Game (); 
+  const figure = document.querySelector("figure[class='ttt']");
+  const view = new View (game, figure)
+  view.setupBoard()
 });
