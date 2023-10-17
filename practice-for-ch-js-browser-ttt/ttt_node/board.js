@@ -7,6 +7,7 @@ class Board {
 
   isEmptyPos(pos) {
     if (!Board.isValidPos(pos)) {
+    debugger;
       throw new MoveError('Is not valid position!');
     }
 

@@ -8,3 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const view = new View (game, figure)
   view.setupBoard()
 });
+
